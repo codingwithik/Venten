@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:apps="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".carowner.CarOwnerFragment"
+    android:focusableInTouchMode="false">
+
+    <!-- TODO: Update blank fragment layout -->
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/top_action_bar" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:id="@+id/cardView1_id"
+                    android:layout_margin="16dp"
+                    apps:cardBackgroundColor="@color/colorWhite"
+                    apps:contentPadding="4dp"
+                    apps:cardCornerRadius="8dp"
+                    apps:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/car"
+                        android:layout_marginEnd="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Total number"
+                            android:textStyle="bold"
+                            android:textSize="24sp"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="10"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="14sp"/>
+
+                    </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date Range"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginEnd="10dp"/>
+
+                <TextView
+                    android:id="@+id/date_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="2008 - 2010"
+                    android:textColor="@color/cardBackground"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:id="@+id/cardView_id"
+            android:layout_marginTop="250dp"
+            apps:cardBackgroundColor="@color/cardBackground"
+            apps:contentPadding="4dp"
+            apps:cardCornerRadius="28dp"
+            android:layout_marginBottom="-28dp"
+            apps:cardElevation="8dp">
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"/>
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="8dp"
+                android:text="No Cars Available"
+                android:textAlignment="center"
+                android:textColor="#A8A8A8"
+                android:textSize="24sp"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:textStyle="bold" />
+
+            <ProgressBar
+                android:id="@+id/loading"
+                android:layout_width="29dp"
+                android:layout_height="65dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </FrameLayout>
+
+
+
+</RelativeLayout>
