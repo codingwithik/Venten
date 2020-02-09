@@ -146,7 +146,6 @@ public class CarOwnerFragment extends Fragment {
             cap = str.substring(0, 1).toUpperCase() + str.substring(1);
         }
 
-        Log.e("color", cap);
         try {
             reader.readLine();
 

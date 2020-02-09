@@ -108,10 +108,6 @@ public class CarFilterAdapter extends BaseAdapter {
         country.setText(countryList);
         color.setText(colorList);
 
-
-        if(cars.getColors().contains("Green"))
-            img.setBackgroundTintList(mContext.getResources().getColorStateList(R.color.colorAccent));
-
         return convertView;
     }
 }
